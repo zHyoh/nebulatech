@@ -1,9 +1,9 @@
 export default function Categories() {
   const categoriesList = [
-    { name: 'Componentes', img: '/images/componentes.jpg' },
-    { name: 'Periféricos', img: '/images/perifericos.jpg' },
-    { name: 'Laptops', img: '/images/laptops.jpg' },
-    { name: 'Monitores', img: '/images/monitores.jpg' }
+    { name: 'Componentes', img: './images/componentes.jpg' },
+    { name: 'Periféricos', img: './images/perifericos.jpg' },
+    { name: 'Laptops', img: './images/laptops.jpg' },
+    { name: 'Monitores', img: './images/monitores.jpg' }
   ];
 
   const handleCategoryClick = (categoryName) => {

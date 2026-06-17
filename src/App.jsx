@@ -23,7 +23,7 @@ const products = [
       price: 129.99, 
       desc: "Interruptores silenciosos, chasis de aluminio.", 
       tag: "Populares", 
-      img: "/images/vortexk9.jpg" 
+      img: "./images/vortexk9.jpg" 
     },
     { 
       id: 2, 
@@ -31,7 +31,7 @@ const products = [
       price: 849.00, 
       desc: "Pantalla OLED 144Hz, procesador de última generación.", 
       tag: "Nuevos", 
-      img: "/images/nebulatab.jpg" 
+      img: "./images/nebulatab.jpg" 
     },
     { 
       id: 3, 
@@ -39,7 +39,7 @@ const products = [
       price: 199.50, 
       desc: "Cancelación de ruido activa, controladores de 50mm.", 
       tag: "Populares", 
-      img: "/images/titanstudio.webp" 
+      img: "./images/titanstudio.webp" 
     }
   ];
 

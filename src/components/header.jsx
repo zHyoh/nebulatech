@@ -11,12 +11,12 @@ export default function Header({ cartCount, onCartClick }) {
           </ul>
         </nav>
         <div className="d-flex g-4 a-items-center">
-          <button 
-            onClick={onCartClick} 
-            className="icon-link" 
+          <button
+            onClick={onCartClick}
+            className="icon-link"
             style={{ background: 'none', border: 'none', cursor: 'pointer', position: 'relative', fontSize: '1.2rem' }}
           >
-            🛒 
+            🛒
             {cartCount > 0 && (
               <span className="cart-badge">{cartCount}</span>
             )}

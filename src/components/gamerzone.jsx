@@ -20,7 +20,6 @@ export default function GamerZone() {
             <span className="special-tag">SPECIAL EDITION</span>
             <h3 className="card-title">Nebula Pro Wireless</h3>
             <p className="card-text">Latencia cero, switches ópticos y una batería de 100 horas.</p>
-            {/* Añadimos evento interactivo */}
             <a 
               href="#" 
               className="btn-outline" 
@@ -29,7 +28,12 @@ export default function GamerZone() {
               Ver Detalles
             </a>
           </div>
-          <img src="/images/Mouse Pro.jpg" className="card-img-main" alt="Nebula Pro" />
+          {/* CORRECCIÓN: Ruta dinámica + nombre limpio sin espacios */}
+          <img 
+            src={`./images/mouse-pro.jpg`} 
+            className="card-img-main" 
+            alt="Nebula Pro" 
+          />
         </div>
 
         <div className="gamer-card secondary-card">
@@ -37,7 +41,12 @@ export default function GamerZone() {
             <h3 className="card-title">RGB Aura Desk</h3>
             <p className="card-text">Sincroniza toda tu habitación.</p>
           </div>
-          <img src="/images/Setup RGB.jpg" className="card-img-side" alt="Setup RGB" />
+          {/* CORRECCIÓN: Ruta dinámica + nombre limpio sin espacios */}
+          <img 
+            src={`./images/setup-rgb.jpg`} 
+            className="card-img-side" 
+            alt="Setup RGB" 
+          />
         </div>
 
         <div className="mini-grid-container">
