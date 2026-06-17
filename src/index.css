@@ -1003,3 +1003,82 @@ EN MEDIO, SE BAJABA SOLA, AGREGUE ESA LINEA SOLO PARA ESO, LO TQM PROFE */
     /* Hace que la imagen llene el espacio sin deformarse */
     display: block;
 }
+/* Contenedor principal del catálogo */
+.selection-section {
+  padding: 4rem 2rem;
+}
+
+.section-header-flex {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 1rem;
+}
+
+/* Botones de Filtrado Cyberpunk */
+.btn-filter {
+  background: #111;
+  color: #888;
+  border: 1px solid #333;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-filter:hover {
+  color: #fff;
+  border-color: #666;
+}
+
+.btn-filter.active {
+  background: #00f2fe;
+  color: #000;
+  border-color: #00f2fe;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+}
+
+/* Grilla limpia de 4 columnas perfectas */
+.products-clean-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* Ajustes responsivos para Tablets y Celulares */
+@media (max-width: 1024px) {
+  .products-clean-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 por fila en tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .products-clean-grid {
+    grid-template-columns: 1fr; /* 1 por fila en celulares */
+  }
+  .section-header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+
+/* SOLUCIÓN AL CORTE DE IMÁGENES DENTRO DE PRODUCT CARD */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Obliga a que todas las tarjetas midan lo mismo */
+}
+
+.product-card img, 
+.card-img-main,
+.product-card-img {
+  width: 100% !important;
+  height: 180px !important; /* Alto fijo balanceado */
+  object-fit: contain !important; /* 🌟 Evita que las fotos se corten a la mitad en Linux/Windows */
+  background-color: #ffffff; /* Rellena con fondo blanco limpio los bordes sobrantes */
+  padding: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
