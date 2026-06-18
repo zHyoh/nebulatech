@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Header() {
+export default function Header({ cartCount, onCartClick }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -9,25 +9,21 @@ export default function Header() {
 
   return (
     <header className="header">
-        <div className="container nav-wrapper"> {/* Cambiamos la clase aquí */}
+        <div className="container nav-wrapper">
             
-            {/* 1. Logo (Izquierda) */}
             <div className="logo-section">
-                <div className="logo">NEBULA STORE</div> {/* Mayúsculas para look más pro, como ref */}
+                <div className="logo">NEBULA STORE</div>
             </div>
 
-            {/* 2. Sección del Menú Desplegable (Centro) */}
             <nav className={`nav-menu ${menuOpen ? 'open' : ''}`}>
                 <ul className="list">
-                    <li><a href="#inicio" className="nav-link active">Inicio</a></li>
-                    <li><a href="#productos" className="nav-link">Productos</a></li>
-                    <li><a href="#zonagamer" className="nav-link">Zona Gamer</a></li>
-                    {/* Agregamos uno más para balancear, como en la ref */}
-                    <li><a href="#soporte" className="nav-link">Soporte</a></li>
+                    <li><a href="#inicio" className="nav-link active" onClick={() => setMenuOpen(false)}>Inicio</a></li>
+                    <li><a href="#productos" className="nav-link" onClick={() => setMenuOpen(false)}>Productos</a></li>
+                    <li><a href="#zonagamer" className="nav-link" onClick={() => setMenuOpen(false)}>Zona Gamer</a></li>
+                    <li><a href="#soporte" className="nav-link" onClick={() => setMenuOpen(false)}>Soporte</a></li>
                 </ul>
             </nav>
 
-            {/* 3. Iconos y Hamburguesa (Derecha) */}
             <div className="header-actions">
                 <button 
                     className={`hamburger ${menuOpen ? 'is-active' : ''}`} 
@@ -39,7 +35,9 @@ export default function Header() {
                     <span className="bar"></span>
                 </button>
                 <div className="icon-group">
-                    <a href="#cart" className="icon-link">🛒</a>
+                    <button onClick={onCartClick} className="icon-link" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, position: 'relative' }}>
+                        🛒 {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+                    </button>
                     <a href="#profile" className="icon-link">👤</a>
                 </div>
             </div>
