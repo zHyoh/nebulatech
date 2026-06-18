@@ -8,16 +8,15 @@ export default function Categories() {
 
   const handleCategoryClick = (categoryName) => {
     console.log(`Filtrando la tienda por la categoría: ${categoryName}`);
-    // Aquí podrás conectar luego un estado global para cambiar los productos de abajo
   };
 
   return (
     <section className="categories container">
       <div className="category-grid d-flex j-content-s-between">
         {categoriesList.map((cat, index) => (
-          <div 
-            key={index} 
-            className="category-card" 
+          <div
+            key={index}
+            className="category-card"
             style={{ backgroundImage: `url('${cat.img}')`, cursor: 'pointer' }}
             onClick={() => handleCategoryClick(cat.name)}
           >

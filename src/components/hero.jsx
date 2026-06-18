@@ -1,7 +1,6 @@
 export default function Hero() {
   const scrollToProducts = (e) => {
     e.preventDefault();
-    // Busca la sección de productos y hace un scroll suave
     const selectionSection = document.querySelector('.selection-section');
     if (selectionSection) {
       selectionSection.scrollIntoView({ behavior: 'smooth' });
@@ -21,7 +20,6 @@ export default function Hero() {
             Equipamiento de élite diseñado para los arquitectos del mañana.
           </p>
           <div className="hero-actions d-flex g-4">
-            {/* Vinculamos el evento de scroll */}
             <a href="#" className="btn btn-primary" onClick={scrollToProducts}>
               Explorar Tienda
             </a>

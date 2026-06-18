@@ -34,7 +34,6 @@ function App() {
     { id: 16, name: "Nebula Pad Stream", price: 229.99, desc: "Controlador táctil modular con 15 macro-teclas LED personalizables.", tag: "Nuevos", img: `./images/nebula-pad-stream.jpg` }
   ];
 
-  // Lógica de Filtrado por botones
   const filteredProducts = activeTab === 'Todo'
     ? products
     : products.filter(p => p.tag === activeTab);
@@ -64,12 +63,10 @@ function App() {
         <Categories />
         <GamerZone />
 
-        {/* SECCIÓN DEL CATÁLOGO INTERACTIVO */}
         <section id="productos" className="selection-section container">
           <div className="section-header-flex d-flex j-content-s-between a-items-center">
             <h2 className="section-title no-margin">Nuestra Selección</h2>
 
-            {/* BOTONES DE FILTRADO INTERACTIVOS */}
             <div className="filter-buttons d-flex g-3">
               {['Todo', 'Populares', 'Nuevos'].map((tab) => (
                 <button
@@ -83,7 +80,6 @@ function App() {
             </div>
           </div>
 
-          {/* GRID CONFIGURADO PERFECTAMENTE */}
           <div className="products-clean-grid">
             {filteredProducts.map((product) => (
               <ProductCard
