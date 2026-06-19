@@ -127,8 +127,8 @@ nav {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.2) 100%),
         url('../public/images/premium-tech-hero.jpg');
     background-size: cover;
-    repeat: no-repeat;
-    background-position: center;
+background-repeat: no-repeat;
+background-position: center 10%;
     display: flex;
     align-items: center;
     padding-top: 4rem;
